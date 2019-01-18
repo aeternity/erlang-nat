@@ -204,6 +204,7 @@ only_permanent_lease_supported({error, {http_error, "500", Body}}) ->
 only_permanent_lease_supported(_) ->
   false.
 
+
 %% @doc Delete a port mapping from the router
 -spec delete_port_mapping(Context :: nat:nat_upnp(),
                           Protocol :: nat:nat_protocol(), InternalPort :: integer(),
