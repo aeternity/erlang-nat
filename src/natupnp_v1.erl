@@ -26,7 +26,6 @@
 -spec discover() -> {ok, Context:: nat:nat_upnp()}
                     | {error, term()}.
 discover() ->
-    _ = application:start(inets),
     _ = rand_compat:seed(erlang:phash2([node()]),
                          erlang:monotonic_time(),
                          erlang:unique_integer()),

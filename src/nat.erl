@@ -45,7 +45,6 @@ debug_stop() ->
 %% @doc discover a NAT gateway and return a context that can be used with
 %% othe functions.
 discover() ->
-    _ = application:start(inets),
     Self = self(),
     Ref = make_ref(),
     Workers = spawn_workers(?BACKENDS, Self, Ref, []),

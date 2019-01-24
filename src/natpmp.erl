@@ -194,7 +194,6 @@ delete_port_mapping(Gateway, Protocol, InternalPort, ExternalPort) ->
 %%
 
 nat_rpc(Gateway0, Msg, OpCode) ->
-	_ = application:start(inets),
     Gateway = inet_ext:parse_address(Gateway0),
     {ok, Sock} = gen_udp:open(0, [{active, once}, inet, binary]),
     try
