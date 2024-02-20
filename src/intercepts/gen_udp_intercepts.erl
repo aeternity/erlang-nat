@@ -25,7 +25,7 @@ send(Socket, Ip, Port, Msg) ->
         undefined ->
             ?MODULE_ORI:send_orig(Socket, Ip, Port, Msg)
     end,
-    dbg:stop_clear(),
+    dbg:stop(),
     Result.
 
 handle_trace({trace, _Pid, 'receive', {udp, Socket, Ip, Port, Msg}=Data}, Key) ->
